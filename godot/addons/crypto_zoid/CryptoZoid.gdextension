@@ -1,0 +1,12 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = "4.1"
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 = "res://addons/crypto_zoid/bin/libcrypto_zoid.linux.template_debug.x86_64.so"
+linux.release.x86_64 = "res://addons/crypto_zoid/bin/libcrypto_zoid.linux.template_release.x86_64.so"
+windows.debug.x86_64 = "res://addons/crypto_zoid/bin/crypto_zoid.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://addons/crypto_zoid/bin/crypto_zoid.windows.template_release.x86_64.dll"
+macos.debug = "res://addons/crypto_zoid/bin/libcrypto_zoid.macos.template_debug.framework"
+macos.release = "res://addons/crypto_zoid/bin/libcrypto_zoid.macos.template_release.framework"
