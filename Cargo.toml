@@ -1,0 +1,22 @@
+[package]
+name = "crypto_zoid"
+version = "0.1.0"
+edition = "2021"
+description = "Ed25519, SHA-256, and base64url for Godot 4.x via GDExtension"
+license = "MIT"
+repository = "https://github.com/ClawfficeOrg/CryptoZoid-gd"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+godot = "0.2"
+ed25519-dalek = { version = "2.1", features = ["rand_core"] }
+sha2 = "0.10"
+rand = "0.8"
+base64 = "0.22"
+
+[profile.release]
+opt-level = "s"   # optimize for size (smaller .so/.dll)
+lto = true
+codegen-units = 1
